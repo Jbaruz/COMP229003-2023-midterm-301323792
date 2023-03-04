@@ -8,7 +8,7 @@
           <!-- ------------------------ -->
           <!-- FIX THE ADD BUTTON BELOW -->
           <!-- ------------------------ -->
-          <a href="" class="btn btn-primary"><i class="fa fa-plus"></i> Add a book</a>
+          <a href="/books/details" class="btn btn-primary"><i class="fa fa-plus"></i> Add a book</a>
           <br>
           <div class="table-responsive">
             <table class="table table-bordered table-striped table-hover">
@@ -31,24 +31,13 @@
                   <td class="text-center"><%= books[count].Author %></td>
                   <td class="text-center"><%= books[count].Genre %></td>
 
-                  <td class="text-center">
-                    <!-- ------------------------ -->
-                    <!-- ADD the EDIT BUTTON HERE -->
-                    <!-- ------------------------ -->
-
-                  </td>
-
-                  <td class="text-center">
-                    <!-- ------------------------ -->
-                    <!-- ADD the DELETE BUTTON HERE -->
-                    <!-- ------------------------ -->
-                  </td>
+                  <td class="text-center col-1"><a href="/books/edit/<%=books[count]._id%>" class = "btn btn-primary"><i class="fa-sharp fa-solid fa-pen-to-square"></i>Edit </a></td> <!--Added-->
+                  <td class="text-center col-1"><a href="/books/delete/<%=books[count]._id%>" class = "btn btn-danger"><i class="fa-regular fa-trash"></i>Delete </a></td> <!--Added-->
                 </tr>
                 <% } %>
               </tbody>
             </table>
-            <td class="text-center col-1"><a href="" class = "btn btn-primary"><i class="fa-sharp fa-solid fa-pen-to-square"></i>Edit </a></td> <!--Added-->
-            <td class="text-center col-1"><a href="" class = "btn btn-danger"><i class="fa-regular fa-trash"></i>Delete </a></td> <!--Added-->
+
           </div>
 
            <div class="col-md-offset-1 col-md-10 text-center">
