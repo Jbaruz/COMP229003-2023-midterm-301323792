@@ -8,9 +8,9 @@ let logger = require('morgan');
 // import "mongoose" - required for DB Access
 let mongoose = require('mongoose');
 // URI
-let DB = require('./db');
+// let DB = require('./db');
 
-mongoose.connect(process.env.URI || DB.URI, {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(process.env.URI || require('./db').URI, {useNewUrlParser: true, useUnifiedTopology: true});
 
 let mongoDB = mongoose.connection;
 mongoDB.on('error', console.error.bind(console, 'Connection Error:'));
